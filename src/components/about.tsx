@@ -1,13 +1,19 @@
+"use client"
+import { useTranslation } from 'react-i18next';
+import '../app/i18n'; // Import the i18n configuration
+
+
 
 export default function About() {
+    const {t} = useTranslation()
     return (
       <>
         
         <section className="bg-white " id="acerca">
     <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div className="font-light text-gray-500 sm:text-lg ">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">¿Quiénes somos?</h2>
-            <p className="mb-4">Somos una agencia de profesionales dedicados apasionadamente al mundo inmobiliario. Nos especializamos en facilitar procesos de compra, venta y alquiler de propiedades, brindando un servicio integral que va más allá de las transacciones convencionales. Nuestro compromiso es proporcionar a nuestros clientes una experiencia inigualable en el mercado inmobiliario, respaldada por un equipo de expertos altamente capacitados.</p>
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">{t('us')}</h2>
+            <p className="mb-4">{t('who')}</p>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-8">
             <img className="w-full rounded-lg" src="./images/about1.jpg" alt="office content 1"/>

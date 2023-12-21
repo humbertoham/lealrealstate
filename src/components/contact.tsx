@@ -1,7 +1,14 @@
+"use client"
+import { useTranslation } from 'react-i18next';
+import '../app/i18n'; // Import the i18n configuration
+
+
+
 
 import { EnvelopeIcon, PhoneIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 export default function Contact() {
+    const {t} = useTranslation()
     return (
       <>
           
@@ -12,7 +19,7 @@ export default function Contact() {
     <div className="flex justify-center">
         <div className="text-center md:max-w-xl lg:max-w-3xl">
             <h2 className="mb-12 px-6 text-4xl font-bold">
-                Contáctanos
+                {t('con')}
             </h2>
         </div>
     </div>
@@ -31,7 +38,7 @@ export default function Contact() {
                         </div>
                         <div className="ml-6 grow">
                             <p className="mb-2 font-bold">
-                                Número
+                            {t('num')}
                             </p>
                             
                             <p className="text-neutral-500 ">
@@ -66,7 +73,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="ml-6 grow">
-                            <p className="mb-2 font-bold ">Redes sociales</p>
+                            <p className="mb-2 font-bold ">{t('social')}</p>
                             
                             <p className="text-neutral-500 ">
                             <a href="https://www.facebook.com/profile.php?id=61553154526911"  target="_blank" >

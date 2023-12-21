@@ -5,18 +5,21 @@ import { Disclosure, Menu, Transition  } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { MdEmail } from "react-icons/md";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-const navigation = [
-  { name: 'Acerca de', href: '/#acerca', current: false },
-  { name: 'Propiedades', href: '/#propiedades', current: false },
-  { name: 'Contáctanos', href: '#contacto', current: false },
- 
-]
+
+
+import { useTranslation } from 'react-i18next';
+import '../app/i18n'; // Import the i18n configuration
+
+
+
+
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  const {t} = useTranslation()
   return (
     <Disclosure as="nav" className="bg-black py-5">
       {({ open }) => (
@@ -46,19 +49,34 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    
                       <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'nav',
-                          'rounded-md px-3 py-2 text-sm font-medium mt-7'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                        
+                        href= '/#acerca'
+                        className= 'nav rounded-md px-3 py-2 text-sm font-medium mt-7'
+                        
+                        
                       >
-                        {item.name}
+                        {t('about')}
                       </a>
-                    ))}
+                      <a
+                        
+                        href= '/#propiedades'
+                        className= 'nav rounded-md px-3 py-2 text-sm font-medium mt-7'
+                        
+                        
+                      >
+                        {t('props')}
+                      </a>
+                      <a
+                        
+                        href= '#contacto'
+                        className= 'nav rounded-md px-3 py-2 text-sm font-medium mt-7'
+                        
+                        
+                      >
+                        {t('con')}
+                      </a>
                   </div>
                 </div>
               </div>
@@ -72,7 +90,7 @@ export default function Navbar() {
                 </div>
                 <div className='hidden xl:ml-6 xl:block text-white'>
                 <PhoneIcon className='icon'/>
-                  <h1>Número:+52 624 117 7448</h1>
+                  <h1>{t('num')}:+52 624 117 7448</h1>
                   </div>
                   <div className='hidden sm:ml-6 sm:block'>
                   <a href='https://www.facebook.com/profile.php?id=61553154526911' target="_blank"> <FaFacebook className = 'iconfa'/> </a>
@@ -84,20 +102,38 @@ export default function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              
                 <Disclosure.Button
-                  key={item.name}
+                  
                   as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'nav',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
+                  href="/#acerca"
+                  className='nav block rounded-md px-3 py-2 text-base font-medium'
+                
+                
                 >
-                  {item.name}
+                  {t('about')}
                 </Disclosure.Button>
-              ))}
+                <Disclosure.Button
+                  
+                  as="a"
+                  href="/#propiedades"
+                  className='nav block rounded-md px-3 py-2 text-base font-medium'
+                
+                
+                >
+                  {t('props')}
+                </Disclosure.Button>
+                <Disclosure.Button
+                  
+                  as="a"
+                  href="#contacto"
+                  className='nav block rounded-md px-3 py-2 text-base font-medium'
+                
+                
+                >
+                  {t('con')}
+                </Disclosure.Button>
+              
             </div>
           </Disclosure.Panel>
         </>

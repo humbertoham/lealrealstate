@@ -1,5 +1,12 @@
+"use client"
+import { useTranslation } from 'react-i18next';
+import '../app/i18n'; // Import the i18n configuration
+
+
+
 
 export default function Footer() {
+  const {t } = useTranslation()
   return (
     <>
       
@@ -11,7 +18,7 @@ export default function Footer() {
           
       <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm sm:text-center ">© 2023 <a href="/" className="hover:underline">Leal Real State</a>. Derechos Reservados.
+          <span className="text-sm sm:text-center ">© 2023 <a href="/" className="hover:underline">Leal Real State</a>. {t('right')}
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a href="https://www.facebook.com/profile.php?id=61553154526911"  target="_blank" className="px-2">
