@@ -6,8 +6,8 @@ import { Bars3Icon, BellIcon, XMarkIcon, EnvelopeIcon, PhoneIcon } from '@heroic
 import { MdEmail } from "react-icons/md";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 const navigation = [
-  { name: 'Acerca de', href: '#acerca', current: false },
-  { name: 'Real State', href: '#', current: false },
+  { name: 'Acerca de', href: '/#acerca', current: false },
+  { name: 'Propiedades', href: '/#propiedades', current: false },
   { name: 'Contáctanos', href: '#contacto', current: false },
  
 ]

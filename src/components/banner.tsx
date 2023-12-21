@@ -11,7 +11,7 @@ export default function Banner() {
           Las <span className='text-amber-200'>mejores</span>
         </h1>
         <h1 className='px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold'>
-          <span className='text-amber-200'>casas</span> del mercado.
+          <span className='text-amber-200'>propiedades</span> del mercado.
         </h1>
       </div>
       <img

@@ -4,6 +4,7 @@ import ButtonR from '@/components/buttonr'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import RealState from '@/components/realstate'
 import Services from '@/components/services'
 import Testimonials from '@/components/testimonials'
 import Work from '@/components/workwithus'
@@ -16,6 +17,7 @@ export default function Home() {
       <Banner/>
      
       <About/>
+      <RealState/>
       <Contact/>
       <Footer/>
       <ButtonR/>

@@ -9,10 +9,48 @@
  
 
 }
+.san{
+  background-image: url('../../public/images/sanjose.jpg');
+  background-position: center;
+  padding: 20px;
+  border-radius: 20px;
+  
+}
+.luc{
+  background-image: url('../../public/images/cabo.jpg');
+  background-position: center;
+  padding: 20px;
+  border-radius: 20px;
+  
+}
+.line{
+  
+  border: rgb(75 85 99) 1px solid;
+  width: 95%;
+  align-self: center;
+  
+}
+.busc{
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.paz{
+  background-image: url('../../public/images/lapaz.jpg');
+  background-position: center;
+  padding: 20px;
+  border-radius: 20px;
+  
+}
 
 .logo{
   height: 100px;
   width: auto;
+}
+.cab{
+  color: rgb(209 213 219);
+  font-size: 4rem;
 }
 
 .nav{
