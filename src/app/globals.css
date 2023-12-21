@@ -10,14 +10,14 @@
 
 }
 .san{
-  background-image: url('../../public/images/sanjose.jpg');
+  background-image: url('../../public/images/cabo.jpg');
   background-position: center;
   padding: 20px;
   border-radius: 20px;
   
 }
 .luc{
-  background-image: url('../../public/images/cabo.jpg');
+  background-image: url('../../public/images/sanjose.jpg');
   background-position: center;
   padding: 20px;
   border-radius: 20px;
