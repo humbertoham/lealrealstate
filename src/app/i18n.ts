@@ -12,7 +12,7 @@ i18n
         translation: {
           hello: 'Hello, World!',
           about: 'About us',
-          props: 'Real State',
+          props: 'Real Estate',
           con: 'Contact us',
           num: 'Number',
           the: 'The',
